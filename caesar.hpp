@@ -12,7 +12,7 @@ string caesar_encrypt(const string &text, const string &key){
     return result;
 }
 
-string caesar_decrypt(const string &cipher_text, const string key){
+string caesar_decrypt(const string &cipher_text, const string &key){
     string result;
     result.reserve(cipher_text.length());
     int int_key = std::stoi(key);
