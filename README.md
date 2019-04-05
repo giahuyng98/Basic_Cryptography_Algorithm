@@ -1,11 +1,11 @@
 # Basic_Cryptography_Algorithm
 Implement some basic historical cipher algorithm such as
-    Caesar cipher
-    Monoalpha betic
-    Playfair
-    Hill cipher
-    Vigenere 
-    One time pad
+    * Caesar cipher
+    * Monoalpha betic
+    * Playfair
+    * Hill cipher
+    * Vigenere 
+    * One time pad
 Both encryption and decryption
 
 *  How to compile
