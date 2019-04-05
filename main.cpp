@@ -2,8 +2,7 @@
 #include "monoalphabetic.hpp"
 #include "playfair.hpp"
 #include "hillcipher.hpp"
-#include "parse_args.hpp"
-#include <bits/stdc++.h>
+#include "parseargs.hpp"
 
 int main(int argc, char *argv[]){
     ParseArgs arg(argc, argv);
