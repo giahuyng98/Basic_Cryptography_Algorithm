@@ -1,7 +1,5 @@
 #include "util.hpp"
 
-const int ALPHA_NUM = 26;
-
 string caesar_encrypt(const string &text, const string &key){
     string result;
     result.reserve(text.length());

@@ -13,6 +13,8 @@ using std::bitset;
 using std::pair;
 using std::string;
 
+const int ALPHA_NUM = 26;
+
 int to_int(char c){
     return c - 'A';
 }
