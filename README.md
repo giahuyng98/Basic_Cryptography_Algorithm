@@ -1,4 +1,13 @@
 # Basic_Cryptography_Algorithm
+Implement some basic historical cipher algorithm such as
+    Caesar cipher
+    Monoalpha betic
+    Playfair
+    Hill cipher
+    Vigenere 
+    One time pad
+Both encryption and decryption
+
 *  How to compile
     ```g++ -std=c++14 main.cpp -O2 -o cipher```
 
