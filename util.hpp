@@ -7,6 +7,7 @@
 #include <string>
 #include <map>
 #include <unordered_map>
+#include <sstream>
 using std::vector;
 using std::bitset;
 using std::pair;
@@ -14,6 +15,9 @@ using std::string;
 
 int to_int(char c){
     return c - 'A';
+}
+char to_char(int n){
+    return 'A' + n;
 }
 
 string to_upper(const string &str){

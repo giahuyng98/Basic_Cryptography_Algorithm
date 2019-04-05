@@ -1,12 +1,14 @@
 #include "caesar.hpp"
 #include "monoalphabetic.hpp"
 #include "playfair.hpp"
+#include "hillcipher.hpp"
 #include "parse_args.hpp"
+#include <bits/stdc++.h>
 
 int main(int argc, char *argv[]){
     ParseArgs arg(argc, argv);
 
-    auto show_usage = [&](){
+   auto show_usage = [&](){
         std::cerr <<
                   "Usage: " + std::string(argv[0]) + " " + "[Options]...\n"
                   "Options:\n"
@@ -29,7 +31,7 @@ int main(int argc, char *argv[]){
                   "  -a c: <key>=int.\n"
                   "  -a m: <key>=26 distinct alphabet character.\n"
                   "  -a p: <key>=string.\n"
-                  "  -a h: <key>=3x3 matrix e.g 17,17,5,21,18,21,2,2,19 .\n"
+                  "  -a h: <key>=3x3 matrix e.g 17,17,5,21,18,21,2,2,19.\n"
                   "  -a v: <key>=string.\n"
                   "  -a o: <key>=string with length = <text>.\n"
                   "\nFor bug report, please see:\n"
@@ -44,7 +46,8 @@ int main(int argc, char *argv[]){
     std::map<char, std::pair<Func, Func>> lookup = {
         {'c', {caesar_encrypt, caesar_decrypt}},
         {'m', {monoalphabetic_encrypt, monoalphabetic_decrypt}},
-        {'p', {playfair_encrypt, playfair_decrypt}}
+        {'p', {playfair_encrypt, playfair_decrypt}},
+        {'h', {hillcipher_encrypt, hillcipher_decrypt}}
     };
 
     auto err = [&](int code = 1){
