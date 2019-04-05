@@ -2,6 +2,8 @@
 #include "monoalphabetic.hpp"
 #include "playfair.hpp"
 #include "hillcipher.hpp"
+#include "vigenere.hpp"
+#include "onetimepad.hpp"
 #include "parseargs.hpp"
 
 int main(int argc, char *argv[]){
@@ -46,7 +48,9 @@ int main(int argc, char *argv[]){
         {'c', {caesar_encrypt, caesar_decrypt}},
         {'m', {monoalphabetic_encrypt, monoalphabetic_decrypt}},
         {'p', {playfair_encrypt, playfair_decrypt}},
-        {'h', {hillcipher_encrypt, hillcipher_decrypt}}
+        {'h', {hillcipher_encrypt, hillcipher_decrypt}},
+        {'v', {vigenere_encrypt, vigenere_decrypt}},
+        {'o', {onetimepad_encrypt, onetimepad_decrypt}}
     };
 
     auto err = [&](int code = 1){

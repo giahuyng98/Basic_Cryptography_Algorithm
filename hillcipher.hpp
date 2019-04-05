@@ -97,7 +97,8 @@ Mat3x3 inverse(const Mat3x3 &mat){
 
 string hillcipher_util(const string &str, const Mat3x3 &mat){
     int det = determinant(mat);
-    if (det == 0 || mod_inverse(det, ALPHA_NUM) == 0) throw "Not exist reverse matrix or key having common factors with 26\n";
+    if (det == 0 || mod_inverse(det, ALPHA_NUM) == 0) 
+        throw "Not exist reverse matrix or key having common factors with 26\n";
     const string fix_text(str + string(str.length() % 3, 'X'));
     string result;
     result.reserve(fix_text.length());
