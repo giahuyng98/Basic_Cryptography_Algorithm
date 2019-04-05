@@ -1,11 +1,10 @@
 # Basic_Cryptography_Algorithm
 *  How to compile
-    Compile with: 
     ```g++ -std=c++14 main.cpp -O2 -o cipher```
 
 *  How to use
     ```
-     Usage: ./main [Options]...
+     Usage: ./cipher [Options]...
      Options:
      -h:              show this help.
      -a <algorithm>:  en/de code algorithm.
@@ -20,7 +19,7 @@
      -k <key>:        key be used to en/de code algorithm.
      
      Example: encrypt string "ptithcm" with key 5 using caesar algorithm
-              ./main -a c -e ptithcm -k 5
+              ./cipher -a c -e ptithcm -k 5
      
      Notes: 
      <text> contain ALPHABET CHARACTER ONLY.
