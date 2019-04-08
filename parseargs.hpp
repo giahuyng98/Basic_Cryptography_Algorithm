@@ -27,7 +27,7 @@ public:
     }
 
     bool exist(std::string const &op){
-        return table.find(op) == table.end() ? false : true;
+        return table.find(op) != table.end();
     }
 
     void output(){
