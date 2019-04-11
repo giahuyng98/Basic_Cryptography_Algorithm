@@ -18,15 +18,19 @@ string monoalphabetic_encrypt(const string &text, const string &key){
     return result;
 }
 string monoalphabetic_decrypt(const string &cipher_text, const string &key){
-//     string fix_key = remove_not_alpha(key);
-//     if (!is_monoalphabetic_key(fix_key))
-//         throw "Error: Key is not valid!\n";
-//     string real_key;
-//     real_key.reserve(ALPHA_NUM);
-//     for(char c : fix_key){
-//         real_key.push_back(fix_key - 'A');
-//     }
-//     return monoalphabetic_encrypt(cipher_text, key);
-    return ""; // TODO: fix it
+    string fix_key = remove_not_alpha(key);
+    if (!is_monoalphabetic_key(fix_key))
+        throw "Error: Key is not valid!\n";
+    string result;
+    result.reserve(cipher_text.length());
+    string look_back(26, ' ');
+    char first = 'A';
+    for(char c : fix_key){
+    	look_back[c - 'A'] = first++;
+    }
+    for(char c : cipher_text){
+        result.push_back(look_back[c - 'A']);
+    }
+    return result;
 }
 
